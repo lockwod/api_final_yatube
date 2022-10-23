@@ -48,6 +48,36 @@ REST API для работы с веб-сайтом YaTube.
 10. Эндпойнт ```api/v1/follow/```
     - GET - все подписки пользователя, сделавшего запроc (возможен поиск по параметру searc) 
     - POST -  подписка на автора (нельзя дублировать подписки и подписываться на самого себя)
+
+## Примеры запросов
+
+Получение списка всех постов:
+```
+Method: GET
+Endpoint: "/api/v1/posts/"
+```
+
+Публикация поста:
+```
+Method: POST
+Endpoint: "/api/v1/posts/"
+Payload:
+{
+    "text": "string",
+    "group": 0
+}
+```
+
+Получение JWT-токена:
+```
+Method: POST
+Endpoint: "/api/v1/auth/jwt/create/"
+Payload:
+{
+    "username": "string",
+    "password": "string"
+}
+```
       
 ## Установка
 
